@@ -11,7 +11,7 @@
  Target Server Version : 80032 (8.0.32)
  File Encoding         : 65001
 
- Date: 29/06/2023 15:18:36
+ Date: 02/07/2023 11:46:32
 */
 
 SET NAMES utf8mb4;
@@ -29,6 +29,8 @@ CREATE TABLE `activity`  (
   `ActivityCategory` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `EmployeeID` int NULL DEFAULT NULL,
   `DepartmentID` int NULL DEFAULT NULL,
+  `ActivityTime` datetime NULL DEFAULT NULL,
+  `ActivityStatus` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ActivityID`) USING BTREE,
   INDEX `FK_Activity_Employee`(`EmployeeID` ASC) USING BTREE,
   INDEX `FK_Activity_Department`(`DepartmentID` ASC) USING BTREE,
